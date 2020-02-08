@@ -1,0 +1,58 @@
+@using System.ComponentModel.DataAnnotations;
+
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div class="text-center">
+<h1 class="display-4">Welcome!</h1>
+    <h4>Here is LOGIN page!</h4>
+    <p>--</p>
+    
+
+    @model User
+    <form asp-action="Create" asp-controller="Home" method="post">
+    <table>
+        <tbody>
+
+            <tr>
+            <td><label asp-for="FirstName">First Name: </label></td>
+            <td><input maxlength="50" asp-for="FirstName" type="text" /></td>
+            <td><span class = "valid" asp-validation-for="FirstName"></span></td>
+
+            </tr>
+
+            <tr>
+            <td><label asp-for="LastName">Last Name: </label></td>
+            <td><input maxlength="50" asp-for="LastName" type="text" /></td>
+            <td><span class = "valid" asp-validation-for="LastName"></span></td>
+            </tr>
+
+            <tr>
+            <td><label asp-for="Age">Age: </label></td>
+            <td><input  maxlength="50" asp-for="Age" type="text" /></td>
+            <td><span class = "valid" asp-validation-for="Age"></span></td>
+            </tr>
+
+            <tr>
+            <td><label asp-for="Email">Email: </label></td>
+            <td><input maxlength="50" asp-for="Email" type="text" /></td>
+            <td><span class = "valid" asp-validation-for="Email"></span></td>
+            </tr>
+
+            <tr>
+            <td><label asp-for="Password">Password</label></td>
+            <td><input maxlength="50" asp-for="Password" type="text" /></td>
+            <td><span class = "valid" asp-validation-for="Password"></span></td>
+            </tr>
+
+
+            <tr>
+            <td><input value="Add User" type="submit"> </td>
+            </tr>
+
+        </tbody>
+    </table>
+    </form>
+
+</div>
